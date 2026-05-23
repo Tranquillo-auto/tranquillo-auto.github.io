@@ -450,6 +450,80 @@
     margin-bottom: 2px;
   }
 
+  /* DÉMO EN LIVE */
+  .section-demo {
+    padding: 120px 60px;
+    background: var(--blanc);
+  }
+
+  .demo-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .demo-left .section-title {
+    margin-bottom: 20px;
+  }
+
+  .demo-desc {
+    font-size: 15px;
+    color: var(--gris);
+    line-height: 1.75;
+    margin-bottom: 32px;
+  }
+
+  .demo-steps {
+    list-style: none;
+  }
+
+  .demo-steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .demo-step-num {
+    width: 28px; height: 28px;
+    background: var(--or);
+    color: var(--noir);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .demo-step-text strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+
+  .demo-step-text span {
+    font-size: 13px;
+    color: var(--gris);
+  }
+
+  .demo-right {
+    background: var(--creme);
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .demo-right-label {
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 24px;
+  }
+
   /* CONTACT */
   .section-contact {
     padding: 120px 60px;
@@ -526,8 +600,8 @@
     .hero-right { display: none; }
     .hero-left { padding: 60px 32px; }
     .pain-grid, .offers-grid { grid-template-columns: 1fr; }
-    .case-inner { grid-template-columns: 1fr; gap: 40px; }
-    .section-problem, .section-offers, .section-case, .section-contact { padding: 80px 32px; }
+    .case-inner, .demo-inner { grid-template-columns: 1fr; gap: 40px; }
+    .section-problem, .section-offers, .section-case, .section-demo, .section-contact { padding: 80px 32px; }
   }
 </style>
 </head>
@@ -539,7 +613,7 @@
     <span class="hero-tag">Tranquillo.auto — Automatisation & systèmes</span>
     <h1 class="hero-title">Votre business tourne.<br><em>Même quand<br>vous dormez.</em></h1>
     <p class="hero-sub">Je construis des systèmes qui gèrent vos commandes, envoient vos mails et organisent vos données — automatiquement, sans que vous ayez à lever le petit doigt.</p>
-    <a href="#contact" class="hero-cta">Parlons de votre projet →</a>
+    <a href="#demo" class="hero-cta">Voir le système en action →</a>
   </div>
   <div class="hero-right">
     <div class="hero-card">
@@ -617,7 +691,7 @@
         <li>Notification à vous à chaque commande</li>
         <li>Livraison sous 48h</li>
       </ul>
-      <a href="#contact" class="btn-offer btn-offer-outline">Commencer →</a>
+      <a href="#demo" class="btn-offer btn-offer-outline">Essayer en live →</a>
     </div>
 
     <div class="offer-card featured">
@@ -632,7 +706,7 @@
         <li>Intégration agenda Google</li>
         <li>Formation pour utiliser le système</li>
       </ul>
-      <a href="#contact" class="btn-offer btn-offer-gold">Je veux ça →</a>
+      <a href="#demo" class="btn-offer btn-offer-gold">Essayer en live →</a>
     </div>
 
     <div class="offer-card">
@@ -715,6 +789,45 @@
           Elle prépare. Le reste se gère seul.
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- DÉMO EN LIVE -->
+<section class="section-demo" id="demo">
+  <div class="demo-inner">
+    <div class="demo-left">
+      <div class="section-label">Essayez maintenant — c'est réel</div>
+      <h2 class="section-title">Voyez le système<br>en action.</h2>
+      <p class="demo-desc">Ce formulaire est connecté à un vrai système automatisé. Remplissez-le et observez ce qui se passe.</p>
+      <ul class="demo-steps">
+        <li>
+          <div class="demo-step-num">1</div>
+          <div class="demo-step-text">
+            <strong>Remplissez le formulaire</strong>
+            <span>Prénom, email, et votre objectif — 30 secondes.</span>
+          </div>
+        </li>
+        <li>
+          <div class="demo-step-num">2</div>
+          <div class="demo-step-text">
+            <strong>Recevez un email automatique</strong>
+            <span>Dans les 10 secondes, un email de confirmation arrive dans votre boîte.</span>
+          </div>
+        </li>
+        <li>
+          <div class="demo-step-num">3</div>
+          <div class="demo-step-text">
+            <strong>C'est ça que j'installe chez vous</strong>
+            <span>Adapté à votre activité, livré en 48h.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="demo-right">
+      <div class="demo-right-label">Formulaire de démonstration — système actif</div>
+      <iframe data-tally-src="https://tally.so/embed/7Ra94Z?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Demande un premier contact"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
     </div>
   </div>
 </section>
